@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %}Sign Up{% endblock %}
+{% block content %}
+<h2>Create Account</h2>
+<label>Full Name</label>
+<input type="text" name="name" form="signup-form" required placeholder="John Doe"/>
+
+<label>Email Address</label>
+<input type="email" name="email" form="signup-form" placeholder="john@example.com"/>
+
+<label>Mobile Number</label>
+<input type="text" name="mobile" form="signup-form" placeholder="+91XXXXXXXXXX"/>
+
+<label>Password</label>
+<input type="password" name="password" form="signup-form" required placeholder="Min 6 characters"/>
+
+<label>Confirm Password</label>
+<input type="password" name="confirm_password" form="signup-form" required placeholder="Re-enter password"/>
+
+<form id="signup-form" method="POST" action="/signup">
+  <button type="submit">Sign Up</button>
+</form>
+
+<div class="link">Already have an account? <a href="/login">Log In</a></div>
+{% endblock %}

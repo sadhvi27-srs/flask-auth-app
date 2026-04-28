@@ -1,0 +1,1 @@
+scp -i C:\Users\sadhv\Downloads\doc1.pem -r C:\Users\sadhv\OneDrive\Desktop\flask_auth_app ubuntu@13.127.222.189:/home/ubuntu

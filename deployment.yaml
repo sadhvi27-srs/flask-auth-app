@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flask-auth-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: flask-auth
+  template:
+    metadata:
+      labels:
+        app: flask-auth
+    spec:
+      containers:
+      - name: flask-auth
+        image: sadhvibagade/flask-auth-app
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 5000
+        env:
+        - name: MYSQL_HOST
+          value: mysql-service
+        - name: MYSQL_USER
+          value: root
+        - name: MYSQL_PASSWORD
+          value: Root@1234
+        - name: MYSQL_DB
+          value: auth_app

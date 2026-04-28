@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block title %}Dashboard{% endblock %}
+{% block content %}
+<h2>🎉 Hello, {{ name }}!</h2>
+<p style="text-align:center; color:#555; margin: 16px 0;">You are successfully logged in.</p>
+<a href="/logout">
+  <button style="background:#ef4444;">Log Out</button>
+</a>
+{% endblock %}
